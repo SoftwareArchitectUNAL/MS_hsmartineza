@@ -1,0 +1,11 @@
+/home/heyner/EntidadesApi/bin/Debug/netcoreapp2.0/EntidadesApi.deps.json
+/home/heyner/EntidadesApi/bin/Debug/netcoreapp2.0/EntidadesApi.runtimeconfig.json
+/home/heyner/EntidadesApi/bin/Debug/netcoreapp2.0/EntidadesApi.runtimeconfig.dev.json
+/home/heyner/EntidadesApi/bin/Debug/netcoreapp2.0/EntidadesApi.dll
+/home/heyner/EntidadesApi/bin/Debug/netcoreapp2.0/EntidadesApi.pdb
+/home/heyner/EntidadesApi/obj/Debug/netcoreapp2.0/EntidadesApi.csprojResolveAssemblyReference.cache
+/home/heyner/EntidadesApi/obj/Debug/netcoreapp2.0/EntidadesApi.csproj.CoreCompileInputs.cache
+/home/heyner/EntidadesApi/obj/Debug/netcoreapp2.0/EntidadesApi.AssemblyInfoInputs.cache
+/home/heyner/EntidadesApi/obj/Debug/netcoreapp2.0/EntidadesApi.AssemblyInfo.cs
+/home/heyner/EntidadesApi/obj/Debug/netcoreapp2.0/EntidadesApi.dll
+/home/heyner/EntidadesApi/obj/Debug/netcoreapp2.0/EntidadesApi.pdb
