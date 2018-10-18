@@ -1,0 +1,26 @@
+version: "2.0"
+services:
+  entities-ms:
+    build: .
+    ports:
+      - "3002:3002"
+    depends_on:
+      - entities-db
+
+
+
+  entities-db: 
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - dbvol:/var/lib/mysql
+    ports:
+      - "3307:3307"
+    restart: always
+
+volumes:
+  dbvol:  

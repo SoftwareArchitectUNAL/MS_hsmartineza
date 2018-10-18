@@ -10,7 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-
+using Swashbuckle.AspNetCore.Swagger;
+using EntidadesApi.Controllers;
 
 namespace EntidadesApi
 {
@@ -28,9 +29,13 @@ namespace EntidadesApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EntidadContext>(opt => opt.UseMySQL(Configuration.GetConnectionString("DbEntidades")));
-            services.AddScoped<IEntidadRepository, EntidadRepository>();
+            services.AddDbContext<EntityContext>(opt => opt.UseMySQL(Configuration.GetConnectionString("DbEntidades")));
+            services.AddScoped<IEntityRepository, EntityRepository>();
             services.AddMvc();
+            services.AddSwaggerGen(c =>
+            {
+                    c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +47,12 @@ namespace EntidadesApi
             }
 
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+});
+
         }
     }
 }
