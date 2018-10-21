@@ -1,16 +1,14 @@
 FROM microsoft/aspnetcore-build
 
-WORKDIR /EntidadesApi
+WORKDIR /home/EntidadesApi
 
-COPY . /EntidadesApi
-
+COPY . .
 
 RUN dotnet restore
 
-RUN dotnet publish -o /publish/
+RUN dotnet  publish -o /publish/
 
 WORKDIR /publish
-
 
 # Build runtime image
 

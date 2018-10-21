@@ -88,7 +88,9 @@ namespace EntidadesApi.Controllers
             _repository.Delete(id);
         }
 
+
         [Route ("score/{id}", Name = "GetScores")]
+        [HttpGet]
         public Score GetScoreEntity(int idEntity)
         {
             return _repository.GetScoreEntity(idEntity);
