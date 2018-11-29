@@ -13,3 +13,5 @@ WORKDIR /publish
 # Build runtime image
 
 ENTRYPOINT ["dotnet", "EntidadesApi.dll"]
+
+EXPOSE 8080
