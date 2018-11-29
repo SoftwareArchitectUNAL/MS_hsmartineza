@@ -1,5 +1,6 @@
 FROM microsoft/aspnetcore-build
 
+
 WORKDIR /home/EntidadesApi
 
 COPY . .
